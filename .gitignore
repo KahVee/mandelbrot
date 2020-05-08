@@ -1,0 +1,16 @@
+*.class
+*.log
+.classpath
+# sbt specific
+.metals/
+.cache
+.history
+.lib/
+null/
+dist/*
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+**/.bloop
