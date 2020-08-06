@@ -1,21 +1,19 @@
 package object main {
-    val windowHeight = 1200
-    val windowWidth = 1200
 
-    val rMin = -2d
-    val rMax = 0.5d
-    val iMin = -1.25d
-    val iMax = 1.25d/*
+    //Must be equal to work properly
+    //TODO: change Zoom.scala to allow changes in this
+    val windowHeight = 300
+    val windowWidth = 300
 
+    val zoomPoint = (0.3602404434376143632361252, -0.6413130610648031748)
+    
+    /*
     val rMin = -1.749957682d
     val rMax = -1.749957684d
     val iMin = -0.000000001d
     val iMax = 0.000000001d*/
 
-    val maxIterations = 100
+    //"Starting point", change to make other Julia sets (bugs out, TODO: fix)
     val z0r = 0d
     val z0i = 0d
-
-    val setColored = false
-    val backgroundColor = scalafx.scene.paint.Color(0,0,0,1)
 }
