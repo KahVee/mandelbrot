@@ -14,3 +14,5 @@ target/
 lib_managed/
 src_managed/
 **/.bloop
+.vscode/settings.json
+project/metals.sbt
