@@ -1,6 +1,8 @@
 *.class
 *.log
 .classpath
+.vscode/
+project/
 # sbt specific
 .metals/
 .cache
@@ -11,6 +13,4 @@ dist/*
 target/
 lib_managed/
 src_managed/
-project/boot/
-project/plugins/project/
 **/.bloop
