@@ -4,8 +4,8 @@ import main._
 
 object Mandelbrot {
     def iteratePoint(cr: Double, ci: Double, maxIterations: Int) = {
-        var r = 0
-        var i = 0
+        var r = 0.0
+        var i = 0.0
 
         var nr = r
         var ni = i
