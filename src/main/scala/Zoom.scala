@@ -2,24 +2,26 @@ package main
 
 import main._
 
-class Zoom(val zoomLevel: Double) {
+class Zoom(zoomLevel: Double, centerR: Double, centerI: Double) {
 
   val maxIterations = math.floor(zoomLevel*zoomLevel*zoomLevel+100).asInstanceOf[Int]
 
-  val constant = 1.25/(math.exp(GUI.zoomLevel))
+  //This function gives a nice "linear-feeling" zoom
+  private val constantR = 1.25/(math.exp(GUI.zoomLevel))
+  private val constantI = (WindowHeight.toDouble/WindowWidth.toDouble)*constantR
 
-  val localRMin = zoomPoint._1 - constant
-  val localRMax = zoomPoint._1 + constant
+  private val localRMin = centerR - constantR
+  private val localRMax = centerR + constantR
 
   //screen space y is "reversed", it increases downwards
-  val localIMin = zoomPoint._2 + constant
-  val localIMax = zoomPoint._2 - constant
+  private val localIMin = centerI + constantI
+  private val localIMax = centerI - constantI
 
+  //These scale the screen space coordinates to complex plane coordinates 
   def scaleToMandelbrotSpaceR(pixelR: Int) = {
-    (localRMax - localRMin) * (pixelR.toDouble / windowWidth.toDouble) + localRMin
+    (localRMax - localRMin) * (pixelR.toDouble / WindowWidth.toDouble) + localRMin
   }
-
   def scaleToMandelbrotSpaceI(pixelI: Int) = {
-    (localIMax - localIMin) * (pixelI.toDouble / windowHeight.toDouble) + localIMin
+    (localIMax - localIMin) * (pixelI.toDouble / WindowHeight.toDouble) + localIMin
   }
 }
