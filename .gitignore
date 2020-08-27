@@ -1,7 +1,7 @@
 *.class
 *.log
 .classpath
-.vscode
+.vscode/
 # sbt specific
 .metals/
 .cache
@@ -13,3 +13,4 @@ target/
 lib_managed/
 src_managed/
 **/.bloop
+.scalafmt.conf
