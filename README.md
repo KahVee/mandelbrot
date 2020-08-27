@@ -6,3 +6,5 @@ This runoff value is calculated for each pixel on the screen (mapped to the comp
 
 <img src="screenshots/black.png" width="400"> <img src="screenshots/minibrot.png" width="400">
 <img src="screenshots/red.png" width="400"> <img src="screenshots/teal.png" width="400">
+
+<img src="screenshots/controlpanel.png">
